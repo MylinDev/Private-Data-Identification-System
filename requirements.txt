@@ -1,0 +1,13 @@
+
+# Instalação: pip install -r requirements.txt
+# Após instalação, execute: python -m spacy download pt_core_news_lg
+
+# Versões com wheels pré-compilados para Python 3.13
+pandas>=2.0.0,<3.0.0
+openpyxl>=3.1.0
+spacy>=3.7.0
+scikit-learn>=1.3.0
+unidecode>=1.3.0
+
+# Nota: O modelo spaCy pt_core_news_lg (~500MB) será baixado separadamente
+# Comando: python -m spacy download pt_core_news_lg

@@ -155,7 +155,7 @@ Você verá uma saída como:
    PUBLICO: 63 (42.0%)
 ======================================================================
 
- Resultado salvo em: components\output\resultado.xlsx
+ Resultado salvo em: Resultado\resultado.xlsx
 
  Processamento concluído com sucesso!
 ```

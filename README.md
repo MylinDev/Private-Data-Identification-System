@@ -60,7 +60,7 @@ O sistema analisa cada texto e:
 
 ```bash
 git clone <url-do-repositorio>
-cd "Hackathon-CapacitaDF-MarlonMBraga"
+cd "Private-Data-Identification-System"
 ```
 
 ### 2. Instale as dependências Python
@@ -114,7 +114,7 @@ O sistema aceita dois formatos:
 Copie seu arquivo para a pasta **`PastaExcel/`** na raiz do projeto:
 
 ```
-Hackathon-CapacitaDF-MarlonMBraga/
+Private-Data-Identification-System/
 ├── Main.py
 ├── PastaExcel/          ← COLOQUE SEU ARQUIVO AQUI
 │   └── meu_arquivo.xlsx
@@ -168,7 +168,7 @@ Você verá uma saída como:
 
 O arquivo será salvo em:
 ```
-Hackathon-CapacitaDF-MarlonMBraga/
+Private-Data-Identification-System/
 └── Resultado/
     └── resultado.xlsx    ← ARQUIVO DE SAÍDA
 ```
@@ -247,7 +247,7 @@ python -m spacy download pt_core_news_lg
 ## Estrutura do Projeto
 
 ```## 
-Hackathon-CapacitaDF-MarlonMBraga/
+Private-Data-Identification-System/
 ├── Main.py                          # Ponto de entrada principal
 ├── requirements.txt                 # Dependências Python
 ├── README.md                        # Documentação do projeto

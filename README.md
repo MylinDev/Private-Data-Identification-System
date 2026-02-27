@@ -277,7 +277,7 @@ Hackathon-CapacitaDF-MarlonMBraga/
 
 -------------------------------------------------------------------------------------------------------
 
-## Olá avaliadores, espero que gostem do projeto, curti bastante criar ele, para qualquer dúvida podem me mandar mensagem.
+Para qualquer dúvida podem me mandar mensagem.
 
 
 

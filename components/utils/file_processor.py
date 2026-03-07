@@ -43,14 +43,15 @@ class FileProcessor:
             texto = str(row[coluna_texto]) if pd.notna(row[coluna_texto]) else ""
             
 #             Detecta PII usando callback
-            resultado = detector_callback(texto) if detector_callback else {'entidades': {}, 'score': 0, 'classificacao': 'PUBLICO', 'resumo': []}
+            resultado = detector_callback(texto) if detector_callback else {'entidades': {}, 'score': 0, 'classificacao': 'PUBLICO', 'resumo': [], 'texto_mascarado': texto, 'texto_highlight': texto}
             
 #             Formata resumo para Excel
             entidades_str = ', '.join(resultado['resumo']) if resultado['resumo'] else 'Nenhuma'
             
             resultados.append({
                 'ID': row[df.columns[0]],  # Primeira coluna como ID
-                'Texto Mascarado': texto,
+                'Texto Original': texto,
+                'Texto Anonimizado': resultado.get('texto_mascarado', texto),
                 'ENTIDADES_ENCONTRADAS': entidades_str,
                 'CLASSIFICACAO': resultado['classificacao'],
                 'SCORE': resultado['score']

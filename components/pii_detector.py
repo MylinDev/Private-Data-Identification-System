@@ -8,6 +8,7 @@ from .detectors.Processos_detectors import ProcessDetectors
 from .detectors.Ner_detectors import NERDetectors
 from .utils.scoring_system import PIIScoringSystem
 from .utils.file_processor import FileProcessor
+from .utils.masker import PIIMasker
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -29,6 +30,9 @@ class PIIDetector:
         
 #         Sistema de scoring
         self.scoring_system = PIIScoringSystem(threshold)
+        
+#         Mascaramento de PII
+        self.masker = PIIMasker()
         
 #         Processador de arquivos
         self.file_processor = FileProcessor()
@@ -73,12 +77,19 @@ class PIIDetector:
         
 #         Calcula score e classificação
         score, resumo = self.scoring_system.calcular_score(entidades)
-        classificacao = self.scoring_system.classificar(score)       
+        classificacao = self.scoring_system.classificar(score)
+        
+#         Gera texto mascarado e HTML com highlight
+        texto_mascarado = self.masker.mascarar_texto(texto, entidades)
+        texto_highlight = self.masker.gerar_html_highlight(texto, entidades)
+        
         return {
             'entidades': entidades,
             'score': score,
             'classificacao': classificacao,
-            'resumo': resumo
+            'resumo': resumo,
+            'texto_mascarado': texto_mascarado,
+            'texto_highlight': texto_highlight
         }
     
 #                                    ==================== PROCESSAMENTO EM LOTE ====================

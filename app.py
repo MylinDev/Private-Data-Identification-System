@@ -45,7 +45,7 @@ html, body, [class*="css"] {
     position: fixed;
     inset: 0;
     background-image: radial-gradient(circle, rgba(148,163,184,0.07) 1px, transparent 1px);
-    background-size: 28px 28px;
+    background-size: 28px 27px;
     pointer-events: none;
     z-index: 0;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
